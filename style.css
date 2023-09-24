@@ -1,0 +1,49 @@
+:root {
+    /* Theme 1 */
+    --theme-one-background:#3a4764;
+    --theme-one-text-color: #ffff;
+    --theme-one-text-color-second: #444b5a;
+    --theme-one-background-second:#182034;
+    --theme-one-background-theerd:#232c43;
+    --theme-one-btn-numbers:#eae3dc;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-one-background);
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 95%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: var(--theme-one-text-color);
+}
+
+.calc > div:nth-child(2) {
+    background-color: var(--theme-one-background-second);
+    color: var(--theme-one-text-color);
+}
+
+.buttons {
+    background-color: var(--theme-one-background-theerd);
+}
+.buttons button {
+    background-color: var(--theme-one-btn-numbers);
+    color: var(--theme-one-text-color-second);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
