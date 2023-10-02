@@ -1,0 +1,196 @@
+:root {
+    /* Theme 3 */
+    --theme-one-background:hsl(268, 75%, 9%);
+    --theme-one-text-color: hsl(52, 100%, 62%);
+    --theme-one-text-color-second: hsl(52, 100%, 62%);
+    --theme-one-background-second:hsl(268, 71%, 12%);
+    --theme-one-background-theerd:hsl(268, 71%, 12%);
+    --theme-one-btn-numbers:hsl(268, 47%, 21%);
+    --theme-one-btn-numbers-hover:hsl(290, 70%, 36%);
+    --theme-one-btn-color-chaing:hsl(176, 100%, 44%);
+    --theme-one-btn-color-blue:hsl(281, 89%, 26%);
+    --theme-one-btn-color-chaing-hover:hsl(177, 92%, 70%);
+    --theme-one-btn-color-blue-hover: hsl(285, 91%, 52%);
+    --del-color:hsl(0, 0%, 100%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    transition: .3s;
+
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-one-background);
+    transition: .3s;
+}
+li {
+    list-style: none;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 353px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: var(--theme-one-text-color);
+    align-items: center;
+}
+nav > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+nav > div > span {
+    text-transform: uppercase;
+    font-size: 10px;
+    position: absolute;
+    top: 70%;
+    left: -90%;
+    transform: translateY(-30%);
+}
+nav > div > div {
+    display: flex;
+    flex-direction: column;
+}
+nav > div > div > ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 7px;
+}
+.btn-theme {
+    width: 67px;
+    height: 20px;
+    background-color: var(--theme-one-background-theerd);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.btn-theme::after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    background-color: var(--theme-one-btn-color-chaing);
+    cursor: pointer;
+}
+.btn-theme.first-theme::after {
+    top: 50%;
+    left: 22%;
+    transform: translate(-72%,-50%);
+}
+.btn-theme.second-theme::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn-theme.last-theme::after {
+    top: 50%;
+    left: 75%;
+    transform: translate(-25%,-50%);
+}
+.btn-theme:hover::after {
+    background-color: var(--theme-one-btn-color-chaing-hover);
+}
+
+.calc > div:nth-child(2) {
+    background-color: var(--theme-one-background-second);
+    color: var(--theme-one-text-color);
+    padding: 25px 20px;
+    border-radius: 7px;
+    text-align: end;
+    font-size: 30px;
+    font-weight: bold;
+}
+.buttons {
+    background-color: var(--theme-one-background-theerd);
+    padding: 20px;
+    border-radius: 7px;
+    transition: .3s;
+
+
+}
+.buttons > div:first-child{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto auto auto auto;
+    width: fit-content;
+
+}
+.buttons button {
+    background-color: var(--theme-one-btn-numbers);
+    color: var(--theme-one-text-color-second);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 67px;
+    box-shadow: inset 0px -3px 0px #0000004f;
+    cursor: pointer;
+}
+.buttons button:hover {
+    background-color: var(--theme-one-btn-numbers-hover);
+}
+.buttons > div:first-child > button {
+    padding: 5px 10px;
+    font-size: 24px;
+}
+.buttons > div:first-child > .del,.add,.minus,.mult {
+    width: 66px;
+    padding: 7px;
+}
+.buttons > div:first-child > .del {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: var(--theme-one-btn-color-blue);
+    color: var(--del-color);
+    cursor: pointer;
+}
+.buttons > div:first-child > .del:hover {
+    background-color: var(--theme-one-btn-color-blue-hover);
+}
+
+.footerBtns {
+    display: flex;
+    margin-top: 15px;
+    gap: 15px;
+    flex-direction: row-reverse;
+
+}
+.footerBtns > button {
+    flex: 1;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.footerBtns > button:first-child {
+    background-color: var(--theme-one-btn-color-chaing);
+    color: var(--theme-one-background);
+    font-size: 15px;
+    cursor: pointer;
+}
+.footerBtns > button:first-child:hover {
+    background-color: var(--theme-one-btn-color-chaing-hover);
+}
+.footerBtns > button:last-child {
+    font-size: 17px;
+    font-weight: bold;
+    background-color: var(--theme-one-btn-color-blue);
+    color: var(--del-color);
+    cursor: pointer;
+
+}
+.footerBtns > button:last-child:hover {
+    background-color: var(--theme-one-btn-color-blue-hover);
+}
