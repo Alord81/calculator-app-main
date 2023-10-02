@@ -8,7 +8,7 @@
   
   <title>Frontend Mentor | Calculator app</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/theme-one.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
               <li>2</li>
               <li>3</li>
             </ul>
-            <span class="btn-theme"></span>
+            <span class="btn-theme first-theme"></span>
           </div>
         </div>
       </nav>
@@ -37,30 +37,32 @@
       <!--// Outputs Field //-->
       <!-- Buttons -->
       <div class="buttons">
-        <!-- Row 1 -->
-        <button class="del">del</button>
-        <button>9</button>
-        <button>8</button>
-        <button>7</button>
-        <!--// Row 1 //-->
-        <!-- Row 2 -->
-        <button class="add">+</button>
-        <button>6</button>
-        <button>5</button>
-        <button>4</button>
-        <!--// Row 2 //-->
-        <!-- Row 3 -->
-        <button class="minus">-</button>
-        <button>3</button>
-        <button>2</button>
-        <button>1</button>
-        <!--// Row 3 //-->
-        <!-- Row 4 -->
-        <button class="mult">x</button>
-        <button class="divide">/</button>
-        <button>0</button>
-        <button class="dot">.</button>
-        <!-- Row 4 //-->
+        <div>
+          <!-- Row 1 -->
+          <button class="number">7</button>
+          <button class="number">8</button>
+          <button class="number">9</button>
+          <button class="del">del</button>
+          <!--// Row 1 //-->
+          <!-- Row 2 -->
+          <button class="number">6</button>
+          <button class="number">5</button>
+          <button class="number">4</button>
+          <button class="add">+</button>
+          <!--// Row 2 //-->
+          <!-- Row 3 -->
+          <button class="number">3</button>
+          <button class="number">2</button>
+          <button class="number">1</button>
+          <button class="minus">-</button>
+          <!--// Row 3 //-->
+          <!-- Row 4 -->
+          <button class="dot">.</button>
+          <button class="number">0</button>
+          <button class="divide">/</button>
+          <button class="mult">x</button>
+          <!-- Row 4 //-->
+        </div>
         <!-- Row 5 -->
         <div class="footerBtns">
           <button class="equl">=</button>
@@ -72,4 +74,5 @@
     </div>
   </div>
 </body>
+<script src="./dist/index.js"></script>
 </html>
