@@ -194,3 +194,6 @@ nav > div > div > ul {
 .footerBtns > button:last-child:hover {
     background-color: var(--theme-one-btn-color-blue-hover);
 }
+.output-field {
+    height: 34px;
+}
