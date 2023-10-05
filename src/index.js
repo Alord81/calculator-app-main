@@ -1,5 +1,5 @@
 let themeBtn = document.querySelector('.btn-theme'),
-    link = document.querySelectorAll('link')[1],
+    link = document.querySelectorAll('link')[4],
     numberBtn = document.querySelectorAll('.number'),
     delBtn = document.getElementsByClassName('del')[0],
     addBtn = document.querySelector('.add'),
@@ -60,19 +60,25 @@ numberBtn.forEach((element) => {
 })
 
 function showOperation(op) {
+    let eq;
+    if (equation.length === 0) {
+        eq = ''
+    } else {
+        eq = equation[0]
+    }
     switch (op) {
-        case 'add' :
-            operation.innerHTML = '+';
+        case 'add':
+            operation.innerHTML = eq + ' +';
             break;
-        case 'minus' :
-            operation.innerHTML = '-';
+        case 'minus':
+            operation.innerHTML = eq + ' -';
             break;
-        case 'mult' :
-            operation.innerHTML = 'x';
+        case 'mult':
+            operation.innerHTML = eq + ' x';
             break;
-        case 'divide' :
-                operation.innerHTML = '/';
-                break;
+        case 'divide':
+            operation.innerHTML = eq + ' /';
+            break;
         case '':
             operation.innerHTML = ''
     }
@@ -82,7 +88,7 @@ delBtn.addEventListener('click', () => {
     if (numbers.length > 0) {
         numbers = numbers.slice(0, length - 1);
         showUI(numbers)
-    }else if(equation.length === 1) {
+    } else if (equation.length === 1) {
         numbers = equation[0]
         numbers = numbers.toString().slice(0, length - 1);
         equation[0] = numbers
@@ -92,7 +98,7 @@ delBtn.addEventListener('click', () => {
 })
 
 addBtn.addEventListener('click', () => {
-    if(numbers.length > 0) {
+    if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
     }
@@ -102,7 +108,7 @@ addBtn.addEventListener('click', () => {
 })
 
 minusBtn.addEventListener('click', () => {
-    if(numbers.length > 0) {
+    if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
     }
@@ -112,7 +118,7 @@ minusBtn.addEventListener('click', () => {
 })
 
 multBtn.addEventListener('click', () => {
-    if(numbers.length > 0) {
+    if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
     }
@@ -127,7 +133,7 @@ dotBtn.addEventListener('click', () => {
 })
 
 divideBtn.addEventListener('click', () => {
-    if(numbers.length > 0) {
+    if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
     }
@@ -146,63 +152,63 @@ function theResolt(n, o) {
         equation.push(numbers)
     }
     if (o === 'add') {
-        if(n.length === 1) {
+        if (n.length === 1) {
             showUI(equation[0])
-        }else if(n.length >= 2) {
+        } else if (n.length >= 2) {
             numbers = (+n[0] + +n[1])
             showUI(numbers)
             equation.length = 0
             equation.push(numbers)
             numbers = ''
-        }else {
-            if(n.length === 1) {
+        } else {
+            if (n.length === 1) {
                 error = 'They are one Number!'
                 showUI(error)
             }
         }
-    }else if (o === 'minus') {
-        if(n.length === 1) {
+    } else if (o === 'minus') {
+        if (n.length === 1) {
             showUI(equation[0])
-        }else if(n.length >= 2) {
+        } else if (n.length >= 2) {
             numbers = (+n[0] - +n[1])
             showUI(numbers)
             equation.length = 0
             equation.push(numbers)
             numbers = ''
-        }else {
-            if(n.length === 1) {
+        } else {
+            if (n.length === 1) {
                 error = 'They are one Number!'
                 showUI(error)
             }
         }
-    }else if (o === 'mult') {
-        if(n.length === 1) {
+    } else if (o === 'mult') {
+        if (n.length === 1) {
             showUI(equation[0])
-        }else if(n.length >= 2) {
+        } else if (n.length >= 2) {
             numbers = (+n[0] * +n[1])
             showUI(numbers)
             equation.length = 0
             equation.push(numbers)
             numbers = ''
             operations = ''
-        }else {
-            if(n.length === 1) {
+        } else {
+            if (n.length === 1) {
                 error = 'They are one Number!'
                 showUI(error)
             }
         }
-    }else if (o === 'divide') {
-        if(n.length === 1) {
+    } else if (o === 'divide') {
+        if (n.length === 1) {
             showUI(equation[0])
-        }else if(n.length >= 2) {
+        } else if (n.length >= 2) {
             numbers = (+n[0] / +n[1])
             showUI(numbers)
             equation.length = 0
             equation.push(numbers)
             numbers = ''
             operations = ''
-        }else {
-            if(n.length === 1) {
+        } else {
+            if (n.length === 1) {
                 error = 'They are one Number!'
                 showUI(error)
             }
