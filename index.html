@@ -8,7 +8,23 @@
   
   <title>Frontend Mentor | Calculator app</title>
 
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <!--/// Google font ///-->
+  
   <link rel="stylesheet" href="./css/theme-one.css">
+  <style>
+    *,body{
+      font-family: 'League Spartan', sans-serif;
+      /* font-family: 'Space Grotesk', sans-serif; */
+    }
+    /* .del {
+      font-family: 'League Spartan', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
+    } */
+  </style>
 </head>
 <body>
 
@@ -32,7 +48,8 @@
       <!--// header //-->
       <!-- Outputs Field -->
       <div>
-        <div class="output-field">0</div>
+        <span class="operation"></span>
+        <div class="output-field"></div>
       </div>
       <!--// Outputs Field //-->
       <!-- Buttons -->
