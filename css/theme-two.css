@@ -110,6 +110,8 @@ nav > div > div > ul {
     text-align: end;
     font-size: 30px;
     font-weight: bold;
+    position: relative;
+
 }
 .buttons {
     background-color: var(--theme-one-background-theerd);
@@ -139,8 +141,8 @@ nav > div > div > ul {
     background-color: var(--theme-one-btn-numbers-hover);
 }
 .buttons > div:first-child > button {
-    padding: 5px 10px;
-    font-size: 24px;
+    padding: 8px 10px;
+    font-size: 25px;
 }
 .buttons > div:first-child > .del,.add,.minus,.mult {
     width: 66px;
@@ -149,7 +151,7 @@ nav > div > div > ul {
 .buttons > div:first-child > .del {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 20px;
     background-color: var(--theme-one-btn-color-blue);
     color: var(--theme-one-btn-numbers);
     cursor: pointer;
@@ -167,7 +169,7 @@ nav > div > div > ul {
 }
 .footerBtns > button {
     flex: 1;
-    padding: 10px 10px;
+    padding: 13px 10px;
     font-size: 20px;
     text-transform: uppercase;
 }
@@ -193,4 +195,21 @@ nav > div > div > ul {
 }
 .output-field {
     height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.operation {
+    position: absolute;
+    background-color: transparent;
+    color: var(--theme-one-text-color);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    top: 25%;
+    left: 93%;
+    transform: translate(-7%,-75%);
 }
