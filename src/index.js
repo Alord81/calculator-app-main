@@ -41,10 +41,12 @@ themeBtn.addEventListener("click", () => {
     changeThemBtn()
 })
 
-let numbers = '0';
+let numbers = '';
 
 let equation = [];
 let operations = '';
+
+
 
 function showUI(v) {
     outputField.innerHTML = v
@@ -54,10 +56,41 @@ numbers = ''
 numberBtn.forEach((element) => {
     element.addEventListener('click', () => {
         numbers += +(element.innerHTML)
+        // if (operations.length !== 0) {
+        //     showOperation(operations)
+        // }
         showUI(numbers)
-        showOperation('')
+        // showOperation('')
     })
 })
+
+function theirdNumber(np) {
+    let nextOperations = np;
+    if (
+        equation.length === 1 &&
+        numbers.length === 1 &&
+        operations.length !== 0
+    ) {
+        switch (operations) {
+            case 'add':
+                equation = [+equation[0] + +numbers]
+                operations = np
+                break;
+            case 'minus':
+                equation = [+equation[0] - (+numbers)]
+                operations = np
+                break;
+            case 'mult':
+                equation = [+equation[0] * (+numbers)]
+                operations = np
+                break;
+            case 'divide':
+                equation = [+equation[0] / (+numbers)]
+                operations = np
+                break;
+        }
+    }
+}
 
 function showOperation(op) {
     let eq;
@@ -98,6 +131,7 @@ delBtn.addEventListener('click', () => {
 })
 
 addBtn.addEventListener('click', () => {
+    theirdNumber('add')
     if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
@@ -108,6 +142,8 @@ addBtn.addEventListener('click', () => {
 })
 
 minusBtn.addEventListener('click', () => {
+    theirdNumber('minus')
+
     if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
@@ -118,6 +154,8 @@ minusBtn.addEventListener('click', () => {
 })
 
 multBtn.addEventListener('click', () => {
+    theirdNumber('mult')
+
     if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
@@ -133,6 +171,8 @@ dotBtn.addEventListener('click', () => {
 })
 
 divideBtn.addEventListener('click', () => {
+    theirdNumber('divide')
+
     if (numbers.length > 0) {
         equation.push(numbers)
         numbers = ''
@@ -214,9 +254,9 @@ function theResolt(n, o) {
             }
         }
     }
+    showOperation('')
+
 }
-
-
 resetBtn.addEventListener('click', () => {
     numbers = '0';
     equation = [];
