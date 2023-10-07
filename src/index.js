@@ -56,11 +56,7 @@ numbers = ''
 numberBtn.forEach((element) => {
     element.addEventListener('click', () => {
         numbers += +(element.innerHTML)
-        // if (operations.length !== 0) {
-        //     showOperation(operations)
-        // }
         showUI(numbers)
-        // showOperation('')
     })
 })
 
